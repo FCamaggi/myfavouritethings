@@ -5,9 +5,8 @@ services:
     region: oregon
     plan: free
     branch: master
-    rootDir: backend
-    buildCommand: npm install && npm run build && ls -la dist/
-    startCommand: npm start
+    buildCommand: cd backend && npm install && npm run build && ls -la dist/
+    startCommand: cd backend && npm start
     healthCheckPath: /health
     envVars:
       - key: NODE_ENV
