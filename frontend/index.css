@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Player colors */
+    --color-pink: #e6007e;
+    --color-yellow: #ffc60b;
+    --color-green: #7ac142;
+    --color-blue: #0060ad;
+    --color-purple: #605ca8;
+    --color-orange: #f18e00;
+  }
+
+  body {
+    @apply bg-gray-100;
+    margin: 0;
+    padding: 0;
+    font-family:
+      'Inter',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      sans-serif;
+  }
+}
+
+@layer utilities {
+  .card-shadow {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-shadow-lg {
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .animate-slideIn {
+    animation: slideIn 0.3s ease-out;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  .animate-slideUp {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  .animate-pop {
+    animation: pop 0.3s ease-out;
+  }
+}
+
+@layer components {
+  /* Animaciones personalizadas */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pop {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse-subtle {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-10px);
+    }
+    75% {
+      transform: translateX(10px);
+    }
+  }
+
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Mejoras de accesibilidad */
+  .focus-visible {
+    @apply outline-none ring-2 ring-mft-blue ring-offset-2;
+  }
+
+  /* Transiciones suaves globales */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    @apply transition-all duration-200;
+  }
+
+  button:active {
+    @apply scale-95;
+  }
+
+  /* Estados de carga */
+  .loading-pulse {
+    animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
