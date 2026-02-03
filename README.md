@@ -2,7 +2,7 @@
 
 # 🎮 My Favourite Things
 
-### *Un juego de bazas multiplayer sobre conocer a tus amigos*
+### _Un juego de bazas multiplayer sobre conocer a tus amigos_
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/tu-usuario/my-favourite-things)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -24,12 +24,14 @@ Un party game digital donde **no conoces el valor de tus propias cartas**. Debes
 ## ✨ Características
 
 ### 🌐 Multiplayer en Tiempo Real
+
 - Cada jugador usa su propio dispositivo
 - Sincronización instantánea con WebSocket
 - Sistema de lobbies con códigos únicos (ej: "A3F9")
 - 3-6 jugadores por partida
 
 ### 🎓 Experiencia Completa
+
 - **Tutorial interactivo** paso a paso para nuevos jugadores
 - **Fase de lectura** donde todos ven las respuestas antes de jugar
 - **Ayudas contextuales** durante todo el juego
@@ -37,6 +39,7 @@ Un party game digital donde **no conoces el valor de tus propias cartas**. Debes
 - **Panel de estado** mostrando info de todos los jugadores
 
 ### 🎯 Fiel a las Reglas Oficiales
+
 - 2 rondas, 5 bazas por ronda
 - Pasar categorías izquierda (R1) / derecha (R2)
 - Regla especial: 💔 vence a #1
@@ -44,6 +47,7 @@ Un party game digital donde **no conoces el valor de tus propias cartas**. Debes
 - Sistema de puntuación con corazones ❤️
 
 ### 🎨 Interfaz Moderna
+
 - Diseño responsive (móvil/desktop/tablet)
 - 6 colores vibrantes de jugador
 - Animaciones de revelación
@@ -57,11 +61,13 @@ Un party game digital donde **no conoces el valor de tus propias cartas**. Debes
 ### 🚪 1. Crear o Unirse a un Lobby
 
 **Crear Lobby:**
+
 1. Ingresa tu nombre
 2. Click en "Crear Lobby"
 3. Comparte el código de 4 letras con tus amigos
 
 **Unirse:**
+
 1. Ingresa tu nombre
 2. Click en "Unirse a Lobby"
 3. Escribe el código del lobby
@@ -70,6 +76,7 @@ Un party game digital donde **no conoces el valor de tus propias cartas**. Debes
 ### 📝 2. Fase de Categorías
 
 Cada jugador:
+
 - Recibe una categoría de otro jugador
 - Ejemplo: "Sabores de helado", "Películas de acción", "Lugares para viajar"
 - **Tip:** Las categorías pasan a la IZQUIERDA en Ronda 1, a la DERECHA en Ronda 2
@@ -77,6 +84,7 @@ Cada jugador:
 ### ✍️ 3. Escribir Respuestas
 
 Escribe 6 cosas para la categoría que recibiste:
+
 - **#1**: Tu favorito absoluto ⭐
 - **#2**: Tu segundo favorito
 - **#3**: Tercero
@@ -87,6 +95,7 @@ Escribe 6 cosas para la categoría que recibiste:
 **Importante:** Estas respuestas se escriben EN LAS CARTAS DEL JUGADOR QUE TE DIO LA CATEGORÍA.
 
 **Ejemplo:**
+
 ```
 Categoría: "Sabores de helado"
 #1: Chocolate
@@ -100,6 +109,7 @@ Categoría: "Sabores de helado"
 ### 📖 4. Fase de Lectura
 
 **¡Momento crucial!**
+
 - Todos ven las respuestas de todos en pantalla
 - Los rankings (#1-5, 💔) están OCULTOS
 - Solo sabes QUÉ escribieron, no QUÉ NÚMERO tiene cada respuesta
@@ -109,6 +119,7 @@ Categoría: "Sabores de helado"
 ### 🎲 5. Jugando Bazas (×10 total)
 
 Cada baza:
+
 1. El jugador activo elige una carta
 2. Los demás juegan una carta cada uno en orden
 3. Se revelan los números ocultos
@@ -116,6 +127,7 @@ Cada baza:
 5. El ganador recibe 1 ❤️
 
 **Reglas importantes:**
+
 - 1 es mejor que 2, 2 mejor que 3, etc.
 - En caso de empate, gana el primer jugador de la baza
 - El ganador de cada baza inicia la siguiente
@@ -135,6 +147,7 @@ En cualquier otra situación, el 💔 pierde contra todo (es como un #100).
 ### 🏆 6. Victoria
 
 Después de **2 rondas** (10 bazas totales):
+
 - El jugador con MÁS ❤️ gana
 - En caso de empate, ¡todos ganan!
 
@@ -143,12 +156,14 @@ Después de **2 rondas** (10 bazas totales):
 ## 🛠️ Stack Tecnológico
 
 ### Frontend
+
 - **React 19** con TypeScript
 - **Vite** para bundling ultra-rápido
 - **TailwindCSS** para estilos
 - **Socket.IO Client** para comunicación real-time
 
 ### Backend
+
 - **Node.js** + **Express**
 - **TypeScript** para type safety
 - **Socket.IO Server** para WebSocket
@@ -156,6 +171,7 @@ Después de **2 rondas** (10 bazas totales):
 - **Rate limiting** y seguridad incluida
 
 ### Deployment
+
 - **Frontend:** Netlify
 - **Backend:** Render
 - **Database:** MongoDB Atlas
@@ -165,6 +181,7 @@ Después de **2 rondas** (10 bazas totales):
 ## 🚀 Desarrollo Local
 
 ### Prerequisitos
+
 - Node.js v18+
 - MongoDB local o Atlas
 
@@ -188,6 +205,7 @@ bash dev.sh
 ### Testing Multiplayer
 
 Abre 4 tabs en `http://localhost:3000`:
+
 1. Tab 1: Crea lobby
 2. Tabs 2-4: Únete con el código
 3. ¡Juega!
@@ -230,21 +248,27 @@ my-favourite-things/
 ## 🎨 Capturas
 
 ### Lobby Screen
+
 Crea o únete a un lobby con código único
 
 ### Fase de Categorías
+
 Asigna categorías creativas a tus amigos
 
 ### Escribir Respuestas
+
 Completa tus 6 respuestas favoritas
 
 ### Fase de Lectura
+
 Todos ven las respuestas sin números
 
 ### Jugando Bazas
+
 Adivina qué carta es mejor para ganar
 
 ### Resolución
+
 Rankings revelados con animación
 
 ---
@@ -261,7 +285,7 @@ Rankings revelados con animación
 
 ## 🤝 Contribuir
 
-Las contribuciones son bienvenidas! 
+Las contribuciones son bienvenidas!
 
 1. Fork el proyecto
 2. Crea tu feature branch (`git checkout -b feature/AmazingFeature`)
@@ -279,7 +303,7 @@ Distribuido bajo licencia MIT. Ver `LICENSE` para más información.
 
 ## 🙏 Créditos
 
-- Basado en el juego físico **"My Favourite Things"** 
+- Basado en el juego físico **"My Favourite Things"**
 - Implementación fiel a las reglas oficiales
 - Desarrollado con ❤️ para jugar con amigos
 
